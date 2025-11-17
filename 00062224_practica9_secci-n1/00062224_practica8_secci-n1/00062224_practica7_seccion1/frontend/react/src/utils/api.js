@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "http://localhost:3010/api",
 });
 
 // Add token to Authorization Header
@@ -13,3 +13,4 @@ API.interceptors.request.use((req) => {
 });
 
 export default API;
+

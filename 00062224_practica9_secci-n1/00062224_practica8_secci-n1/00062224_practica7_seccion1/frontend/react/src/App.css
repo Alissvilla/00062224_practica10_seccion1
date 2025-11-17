@@ -40,3 +40,76 @@
 .read-the-docs {
   color: #888;
 }
+
+table {
+  margin: 40px auto;
+  border-collapse: collapse;      
+  min-width: 600px;
+  font-family: Arial, sans-serif;
+}
+
+th {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;   
+  align-items: center;       
+  gap: 16px;                 
+}
+
+.menu-container h2 {
+  margin-bottom: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.menu-button {
+  width: 260px;
+  padding: 12px 20px;
+  border-radius: 999px;     
+  border: none;
+  background-color: #057017;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.1s ease, box-shadow 0.1s ease,
+              background-color 0.1s ease;
+}
+
+.menu-button:hover {
+  background-color: #048d97;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.menu-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+table thead th {
+  text-align: center;
+}

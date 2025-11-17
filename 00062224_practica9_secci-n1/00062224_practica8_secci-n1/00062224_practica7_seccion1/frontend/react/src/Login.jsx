@@ -1,4 +1,3 @@
-// src/Login.js
 import { useState } from "react";
 import API from "./utils/api.js";
 
@@ -13,6 +12,7 @@ const Login = () => {
       const response = await API.post("/signin", { email, password });
       localStorage.setItem("token", response.data.token);
       alert("Login successful!");
+      window.location.href = "/protected";
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong!");
     }

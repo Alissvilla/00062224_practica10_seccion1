@@ -1,24 +1,42 @@
-// Protected.js
-
-import { useEffect, useState } from "react";
-import API from "./utils/api.js";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Protected = () => {
-  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await API.get("/protected");
-        setMessage(response.data.message);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchData();
-  }, []);
+  return (
+    <div className="menu-container">
+      <h2>Panel de Ventas</h2>
 
-  return <h1>{message}</h1>;
+      <button
+        className="menu-button"
+        onClick={() => navigate("/customers")}
+      >
+        Ver Tabla de Clientes
+      </button>
+
+      <button
+        className="menu-button"
+        onClick={() => navigate("/sales")}
+      >
+        Registrar Nueva Venta
+      </button>
+
+      <button
+        className="menu-button"
+        onClick={() => navigate("/salesList")}
+      >
+        Lista de Venta con Clientes
+      </button>
+
+      <button
+        className="menu-button"
+        onClick={() => navigate("/salesReport")}
+      >
+        Total de Ventas por Cliente
+      </button>
+    </div>
+  );
 };
 
 export default Protected;
